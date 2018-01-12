@@ -1,4 +1,4 @@
-te table if not exists record(
+create table if not exists record(
 	id serial not null primary key,
 	heading varchar(200),
 	content text not null,
