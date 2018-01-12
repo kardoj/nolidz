@@ -28,8 +28,8 @@ class Db
 	// Zero parameters are also allowed
 	function execute_params($sql, $param_array)
 	{
-		$q = pg_prepare($connection, 'query', $sql);
-		$q = pg_execute($connection, 'query', $param_array);
+		$q = pg_prepare($this->connection, 'query', $sql);
+		$q = pg_execute($this->connection, 'query', $param_array);
 		$rows = array();
                 while($r = pg_fetch_array($q, null, PGSQL_ASSOC))
                 {
