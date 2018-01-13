@@ -16,6 +16,10 @@ div {
 	float: right;
 }
 
+.record-category {
+	padding-left: 100px;
+}
+
 .float-clear {
 	clear: both;
 	font-size: 0;
@@ -24,10 +28,9 @@ div {
 	margin: 0;
 }
 
-.record-category {
-	padding-left: 100px;
-}
-
-.record-list-item, .record-heading, .record-content {
+.record-list-item,
+.record-heading, 
+.record-content,
+.record-controls {
 	padding: 5px;
 }
