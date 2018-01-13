@@ -1,0 +1,33 @@
+div {
+	padding: 20px;
+}
+
+#categorylist ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#categorylist, #content {
+	float: left;
+}
+
+#addnewrecord, .record-category {
+	float: right;
+}
+
+.float-clear {
+	clear: both;
+	font-size: 0;
+	line-height: 0;
+	padding: 0;
+	margin: 0;
+}
+
+.record-category {
+	padding-left: 100px;
+}
+
+.record-list-item, .record-heading, .record-content {
+	padding: 5px;
+}
