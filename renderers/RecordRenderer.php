@@ -52,7 +52,7 @@ class RecordRenderer
 					<div class="record-content">
 						<textarea
 							name="record_content"
-							cols="30"
+							cols="90"
 							rows="10"
 							placeholder="Sisu"
 						>' . $record['record_content'] . '</textarea>

@@ -16,16 +16,18 @@
 	<title>nolidz</title>
 </head>
 <body>
-	<?php require __DIR__ . '/searchbar.php'; ?>
-	<?php require __DIR__ . '/categorylist.php'; ?>
-	
-	<div id="content">
-		<?php
-			$record = RecordHelper::record_from_params($_GET);
-			echo RecordRenderer::render_form($categories->get(), $record);
-		?>
-	</div>
-	
-	<div class="float-clear"></div>
+        <?php require __DIR__ . '/categorylist.php'; ?>
+        <div id="contentbody">
+                <?php require __DIR__ . '/searchbar.php'; ?>
+
+                <div id="content">
+	                <?php
+        	                $record = RecordHelper::record_from_params($_GET);
+                	        echo RecordRenderer::render_form($categories->get(), $record);
+               		 ?>
+                </div>
+        </div>
+
+        <div class="float-clear"></div>
 </body>
 </html>

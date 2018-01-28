@@ -1,6 +1,6 @@
 <div id="searchbar">
 	<input type="text" name="term">
 	<button type="button">Otsi</button>
-	<button type="button" id="addnewrecord">Uus</button>
+	<a href="newrecord.php" id="addnewrecord">Uus</a>
 	<div class="float-clear"></div>
 </div>

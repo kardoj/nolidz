@@ -15,11 +15,13 @@
 	<title>nolidz</title>
 </head>
 <body>
-	<?php require __DIR__ . '/searchbar.php'; ?>
 	<?php require __DIR__ . '/categorylist.php'; ?>
+	<div id="contentbody">	
+		<?php require __DIR__ . '/searchbar.php'; ?>
 	
-	<div id="content">
-		<?php echo RecordRenderer::render($random_record->get()); ?>
+		<div id="content">
+			<?php echo RecordRenderer::render($random_record->get()); ?>
+		</div>
 	</div>
 	
 	<div class="float-clear"></div>
