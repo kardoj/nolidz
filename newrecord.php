@@ -5,7 +5,7 @@
 	require_once __DIR__ . '/helpers/RecordHelper.php';
 	
 	$db = new Db();
-	$categories = new Categories($db);
+	$categories_svc = new Categories($db);
 ?>
 
 <!doctype html>
@@ -23,7 +23,7 @@
                 <div id="content">
 	                <?php
         	                $record = RecordHelper::record_from_params($_GET);
-                	        echo RecordRenderer::render_form($categories->get(), $record);
+                	        echo RecordRenderer::render_form($categories_svc->get(), $record);
                		 ?>
                 </div>
         </div>
