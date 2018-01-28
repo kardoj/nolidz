@@ -14,6 +14,7 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/styles.css">
 	<title>nolidz</title>
+	<script src="js/cancel-link.js"></script>
 </head>
 <body>
         <?php require __DIR__ . '/categorylist.php'; ?>

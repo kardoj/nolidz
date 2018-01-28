@@ -59,7 +59,7 @@ class RecordRenderer
 					</div>
 					<div class="record-controls">
 						<input type="password" name="password" placeholder="Parool">
-						<button type="button">Loobu</button>
+						<a href="index.php" data-control="cancel-link">Loobu</a>
 						<input type="submit" value="Salvesta">
 					</div>
 				</div>
