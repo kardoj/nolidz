@@ -42,11 +42,15 @@ class RecordRenderer
 							placeholder="Pealkiri (valikuline)"
 							value="' . $record['record_heading'] . '"
 						>
+
 						<span class="record-category">
 							<select name="category_id">
 								' . CategoryRenderer::render_select_options($categories, $record['category_id']) . '
 							</select>
+                                                	või
+                                                	<input type="text" placeholder="lisa uus" name="new_category" value="' . $record['new_category'] . '" />
 						</span>
+
 						<div class="float-clear"></div>
 					</div>
 					<div class="record-content">
