@@ -1,11 +1,10 @@
 <?php
 	require_once __DIR__ . '/services/Db.php';
-	require_once __DIR__ . '/services/RandomRecord.php';
 	require_once __DIR__ . '/renderers/RecordRenderer.php';
 	require_once __DIR__ . '/services/Records.php';
 	
 	$db = new Db();
-	$random_record_svc = new RandomRecord($db);
+	$records_svc = new Records($db);
 ?>
 
 <!doctype html>
@@ -24,14 +23,8 @@
 		<div id="content">
 			<?php
 				$record = null;
-				if (isSet($_GET['record_id']) && !empty($_GET['record_id']))
-				{
-					$records_svc = new Records($db);
-					$record = $records_svc->find($_GET['record_id']);
-				}
-				
-				if (empty($record)) $record = $random_record_svc->get();
-
+				if (isSet($_GET['record_id']) && !empty($_GET['record_id'])) $record = $records_svc->find($_GET['record_id']);
+				if (empty($record)) $record = $records_svc->get_random();
 				echo RecordRenderer::render(array($record));
 			?>
 		</div>
