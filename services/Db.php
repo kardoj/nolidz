@@ -28,8 +28,11 @@ class Db
 	// Zero parameters are also allowed
 	function execute_params($sql, $param_array)
 	{
-		$q = pg_prepare($this->connection, 'query', $sql);
-		$q = pg_execute($this->connection, 'query', $param_array);
+		// Using an empty string as stmtname here overwrites any
+		// previous prepared statement making multiple prepares
+		// easily doable
+		$q = pg_prepare($this->connection, '', $sql);
+		$q = pg_execute($this->connection, '', $param_array);
 		$rows = array();
                 while($r = pg_fetch_array($q, null, PGSQL_ASSOC))
                 {
