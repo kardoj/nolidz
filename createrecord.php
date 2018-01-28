@@ -43,8 +43,7 @@
 			}
 			else
 			{
-				// TODO: Return to the record view
-				header('Location: index.php');
+				header('Location: index.php?record_id=' . $db_call[0]['id']);
 			}
 		}
 		else
